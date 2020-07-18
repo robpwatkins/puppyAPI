@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <div className="header-container">
       <Badge />
-      Let's play fetch.
+      <h1 className="tagline">Let's play fetch.</h1>
     </div>
   )
 }

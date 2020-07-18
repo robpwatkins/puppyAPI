@@ -1,10 +1,59 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .App {
+  font-family: 'Crete Round', serif;
+  color: white;
 }
 
 .header-container {
   display: flex;
   width: 100%;
   align-items: center;
-  background: #1876D2;
+  background: #42A5F5;
   border-bottom: 12px solid #1875d27a;
+}
+
+.tagline {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  text-align: center;
+  color: #1875d27a;
+  font-size: 10vw;
+}
+
+.badge-container {
+  width: 165px;
+  height: 165px;
+  margin: 15px 0 15px 15px;
+  padding: 4px;
+  background: #05dfd7;
+  background: #1876D2;
+  border-radius: 50%;
+}
+
+.badge {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  background: #05dfd7;
+  background: #1876D2;
+  border: 2px solid #05afaa;
+  border: 2px dashed white;
+  border-radius: 50%;
+}
+
+.title {
+  margin: 0 12px 0 0;
+  line-height: 48px;
+  font-size: 42px;
+  transform: rotate(-10deg) skew(-15deg);
 }
