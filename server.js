@@ -4,9 +4,9 @@ const port = process.env.PORT || 5000;
 const mysql = require('mysql');
 const connection = mysql.createConnection({
   host: 'localhost',
-  user: 'soberkeeperuser',
-  password: 'Sober123$',
-  database: 'testerDB'
+  user: 'puppyAPIuser',
+  password: 'puppyAPI123$',
+  database: 'puppy_api_db'
 });
 
 app.listen(port, () => console.log(`Listening on port ${port}...`));
