@@ -8,21 +8,12 @@
   font-family: 'Crete Round', serif;
 }
 
-.header-container {
+header {
   display: flex;
   width: 100%;
   align-items: center;
   background: #42A5F5;
   border-bottom: 12px solid #1875d27a;
-}
-
-.tagline {
-  display: flex;
-  flex: 1;
-  justify-content: center;
-  text-align: center;
-  color: #1875d27a;
-  font-size: 10vw;
 }
 
 .badge-container {
@@ -55,4 +46,37 @@
   line-height: 48px;
   font-size: 42px;
   transform: rotate(-10deg) skew(-15deg);
+}
+
+.tag-and-nav {
+  flex: 1;
+  position: relative;
+}
+
+.tagline {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: #1875d27a;
+  font-size: 10vw;
+}
+
+nav {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 23px;
+}
+
+.links {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  padding: 0 18%;
 }

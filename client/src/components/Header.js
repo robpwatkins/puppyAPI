@@ -1,12 +1,16 @@
 import React from 'react';
 import Badge from './Badge';
+import Nav from './Nav';
 
 const Header = () => {
   return (
-    <div className="header-container">
+    <header>
       <Badge />
-      <h1 className="tagline">Let's play fetch.</h1>
-    </div>
+      <div className="tag-and-nav">
+        <h1 className="tagline">Let's play fetch.</h1>
+        <Nav />
+      </div>
+    </header>
   )
 }
 
