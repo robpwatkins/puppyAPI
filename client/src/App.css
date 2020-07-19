@@ -58,6 +58,15 @@ header {
   font-size: 105px;
 }
 
+nav {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  /* background: #3495E9; */
+  justify-content: flex-end;
+  /* padding: 3px 0; */
+}
+
 nav a {
   color: white;
   text-decoration: none;
@@ -67,23 +76,19 @@ nav a {
 
 .links {
   display: flex;
-  width: 60%;
+  width: 62%;
   justify-content: space-around;
   /* padding: 0 100px; */
+}
+
+nav a:nth-child(1) {
+  /* color: hotpink; */
 }
 
 .landing-container {
   background: #3495E9;
 }
 
-nav {
-  position: absolute;
-  display: flex;
-  width: 100%;
-  /* background: #3495E9; */
-  justify-content: flex-end;
-  /* padding: 3px 0; */
-}
 
 .landing {
   width: 100%;
