@@ -124,7 +124,8 @@ nav a:hover {
 }
 
 nav a:nth-child(1) {
-  /* transform: scale(1.5); */
+  transform: scale(1.3);
+  color: white;
 }
 
 .landing-container {
@@ -135,7 +136,7 @@ nav a:nth-child(1) {
 .landing {
   width: 100%;
   height: 100vh;
-  background: white;
+  background: whitesmoke;
   border: 12px solid #308EE4;
   border-radius: 20px;
 }
