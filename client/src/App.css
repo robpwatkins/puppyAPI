@@ -25,10 +25,10 @@ header {
   position: relative;
   display: flex;
   width: 100%;
-  height: 225px;
+  height: 20vw;
   align-items: center;
   background: #42A5F5;
-  border-bottom: 12px solid #1875d27a;
+  /* border-bottom: 12px solid #1875d27a; */
 }
 
 .badge-container {
@@ -41,16 +41,8 @@ header {
   border-radius: 50%;
 }
 
-.badge-padding {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  /* padding: 7px; */
-}
-
 .badge {
-  /* position: absolute; */
+  position: absolute;
   top: 0;
   display: flex;
   width: 100%;
@@ -134,7 +126,7 @@ nav a:nth-child(1) {
 }
 
 .landing-container {
-  background: #3495E9;
+  background: #308EE4;
 }
 
 
@@ -142,6 +134,6 @@ nav a:nth-child(1) {
   width: 100%;
   height: 100vh;
   background: white;
-  /* border: 7px solid #3495E9; */
-  /* border-radius: 15px; */
+  border: 12px solid #308EE4;
+  border-radius: 20px;
 }
