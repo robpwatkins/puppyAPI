@@ -99,6 +99,7 @@ nav {
   /* background: #3495E9; */
   justify-content: flex-end;
   align-items: flex-end;
+  -webkit-backface-visibility: hidden;
   /* padding: 3px 0; */
 }
 
