@@ -4,7 +4,7 @@ import SubmitPup from './SubmitPup';
 const Landing = () => {
   return (
     <div className="landing">
-      <SubmitPup />
+      {/* <SubmitPup /> */}
     </div>
   )
 }

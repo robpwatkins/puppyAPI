@@ -41,11 +41,19 @@ header {
   border-radius: 50%;
 }
 
+.paw {
+  position: relative;
+  color: #42a4f583;
+  z-index: 1;
+}
+
 .title {
+  position: absolute;
   margin: 0 12px 0 0;
   line-height: 48px;
   font-size: 42px;
   transform: rotate(-10deg) skew(-15deg);
+  z-index: 2;
 }
 
 .tag-and-nav {
@@ -57,8 +65,8 @@ header {
   display: flex;
   justify-content: center;
   text-align: center;
-  color: #1875d27a;
-  font-size: 10vw;
+  color: #1875d257;
+  font-size: 105px;
 }
 
 nav {
@@ -78,5 +86,5 @@ nav a {
   display: flex;
   width: 100%;
   justify-content: space-around;
-  padding: 0 18%;
+  padding: 0 150px;
 }
