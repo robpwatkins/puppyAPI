@@ -7,7 +7,9 @@ const Header = () => {
     <header>
       <Badge />
       <div className="tag-and-nav">
-        <h1 className="tagline">Let's play fetch.</h1>
+        <div className="tagline-container">
+          <h1 className="tagline">Let's play fetch.</h1>
+        </div>
         <Nav />
       </div>
     </header>

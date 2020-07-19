@@ -9,9 +9,10 @@
 }
 
 header {
+  position: relative;
   display: flex;
   width: 100%;
-  align-items: center;
+  /* align-items: center; */
   background: #42A5F5;
   border-bottom: 12px solid #1875d27a;
 }
@@ -50,20 +51,26 @@ header {
   position: relative;
 }
 
-.tagline {
+.tagline-container {
+  position: absolute;
   display: flex;
+  width: 100%;
+  height: 100%;
   justify-content: center;
-  text-align: center;
+  align-items: center;
   color: #1875d257;
-  font-size: 105px;
+  font-size: 5vw;
 }
 
 nav {
   position: absolute;
   display: flex;
+  flex-direction: column;
   width: 100%;
+  height: 100%;
   /* background: #3495E9; */
   justify-content: flex-end;
+  align-items: flex-end;
   /* padding: 3px 0; */
 }
 
@@ -82,7 +89,7 @@ nav a {
 }
 
 nav a:nth-child(1) {
-  /* color: hotpink; */
+  transform: scale(1.5);
 }
 
 .landing-container {
