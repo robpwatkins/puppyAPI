@@ -21,7 +21,6 @@ header {
   height: 165px;
   margin: 15px 0 15px 15px;
   padding: 4px;
-  background: #05dfd7;
   background: #1876D2;
   border-radius: 50%;
 }
@@ -34,26 +33,16 @@ header {
   color: white;
   justify-content: center;
   align-items: center;
-  background: #05dfd7;
   background: #1876D2;
-  border: 2px solid #05afaa;
   border: 2px dashed white;
   border-radius: 50%;
 }
 
-.paw {
-  position: relative;
-  color: #42a4f583;
-  z-index: 1;
-}
-
 .title {
-  position: absolute;
   margin: 0 12px 0 0;
   line-height: 48px;
   font-size: 42px;
   transform: rotate(-10deg) skew(-15deg);
-  z-index: 2;
 }
 
 .tag-and-nav {
@@ -69,22 +58,37 @@ header {
   font-size: 105px;
 }
 
-nav {
-  position: absolute;
-  display: flex;
-  width: 100%;
-  justify-content: space-around;
-}
-
 nav a {
   color: white;
   text-decoration: none;
-  font-size: 23px;
+  font-size: 21px;
+  z-index: 1;
 }
 
 .links {
   display: flex;
-  width: 100%;
+  width: 60%;
   justify-content: space-around;
-  padding: 0 150px;
+  /* padding: 0 100px; */
+}
+
+.landing-container {
+  background: #3495E9;
+}
+
+nav {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  /* background: #3495E9; */
+  justify-content: flex-end;
+  /* padding: 3px 0; */
+}
+
+.landing {
+  width: 100%;
+  height: 100vh;
+  background: white;
+  /* border: 7px solid #3495E9; */
+  /* border-radius: 15px; */
 }

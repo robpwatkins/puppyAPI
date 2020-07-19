@@ -1,4 +1,5 @@
 import React from 'react';
+import { Pets } from '@material-ui/icons';
 
 const Nav = () => {
   return (
