@@ -27,12 +27,12 @@ app.get('/testPosts/outward', (req, res) => {
   })
 });
 
-app.post('/testPups', (req, res) => {
+app.post('/pups', (req, res) => {
   const newPup = { 
     name: req.body.name,
-    imgUrl: req.body.imgUrl
+    img_url: req.body.imgUrl
    }
-  connection.query('INSERT INTO testPups SET ?', newPup, (err, res) => {
+  connection.query('INSERT INTO pups SET ?', newPup, (err, res) => {
     if (err) throw err;
   })
 })
