@@ -28,7 +28,7 @@ const SubmitPup = () => {
       },
       body: JSON.stringify({
         name: name,
-        imgUrl: 'testUrl' 
+        imgUrl: imgUrl
       })
     })
     const body = await response.json();
@@ -60,7 +60,7 @@ const SubmitPup = () => {
             // value={this.state.image}
             onChange={uploadFile}
             />
-            {imgUrl && <img width="200" src={this.state.image} alt="Upload Preview" />}
+            {imgUrl && <img width="200" src={imgUrl} alt="Upload Preview" />}
         </label>
         <label htmlFor="name">
           Name
