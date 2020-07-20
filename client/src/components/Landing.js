@@ -18,12 +18,16 @@ const Landing = () => {
     }
     setPups(body);
   }
-  pups && console.log(pups[0].img_url);
+  pups && console.log(pups[0]);
   return (
     <div className="landing-container">
       <div className="landing">
         {pups &&
-          <img src={pups[0].img_url} alt=""/>
+          pups.map(pup => {
+            return (
+              <img src={pup.img_url} key={pup.pups_id} alt=""/>
+            )
+          })
         }
       </div>
     </div>
