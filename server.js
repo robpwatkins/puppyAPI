@@ -20,8 +20,8 @@ app.use(express.json());
 
 app.get('/ping', (req, res) => res.send('pong!'));
 
-app.get('/testPosts/outward', (req, res) => {
-  connection.query('SELECT * FROM testPosts', (err, rows) => {
+app.get('/pups', (req, res) => {
+  connection.query('SELECT * FROM pups', (err, rows) => {
     if (err) throw err;
     res.send(rows);
   })

@@ -44,6 +44,7 @@ const SubmitPup = () => {
     event.preventDefault();
     let { name } = input;
     postToPups(name);
+    window.location.replace('/');
   }
   console.log(input.name);
   return (
