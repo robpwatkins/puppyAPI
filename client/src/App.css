@@ -131,6 +131,7 @@ nav a:nth-child(1) {
 }
 
 .landing-container {
+  text-align: center;
   /* background: #308EE4; */
   border: 12px solid #308EE4;
 }
