@@ -131,17 +131,17 @@ nav a:nth-child(1) {
 }
 
 .landing-container {
-  background: #308EE4;
+  /* background: #308EE4; */
+  border: 12px solid #308EE4;
 }
 
 
-.landing {
+.pups {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
   background: whitesmoke;
-  border: 12px solid #308EE4;
-  border-radius: 20px;
+  /* border-radius: 20px; */
 }
 
 img {
