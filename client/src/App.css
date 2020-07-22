@@ -86,9 +86,9 @@ header {
   height: 100%;
   justify-content: flex-start;
   align-items: center;
+  font-size: 5.65vw;
   /* padding-left: 25px; */
   color: #1875d257;
-  font-size: 5.65vw;
 }
 
 .tagline {
@@ -173,5 +173,13 @@ img {
 
   .title {
     font-size: 38px;
+  }
+
+  .tagline-container {
+    font-size: 56px;
+  }
+
+  nav a {
+    
   }
 }
