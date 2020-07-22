@@ -167,6 +167,10 @@ img {
     width: 150px;
   }
 
+  .badge {
+    padding-top: 99%;
+  }
+
   .title {
     font-size: 38px;
   }
