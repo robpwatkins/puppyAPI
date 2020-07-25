@@ -6,7 +6,7 @@ const connection = mysql.createConnection({
   host: 'localhost',
   user: 'puppyAPIuser',
   password: 'puppyAPI123$',
-  database: 'puppy_api_db'
+  // database: 'puppy_api_db'
 });
 
 app.listen(port, () => console.log(`Listening on port ${port}...`));
