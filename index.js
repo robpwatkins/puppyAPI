@@ -15,10 +15,6 @@ app.use(express.static(path.join(__dirname, 'client/build')));
 
 app.listen(port, () => console.log(`Listening on port ${port}...`));
 
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname + '/client/build/index.html'));
-})
-
 pool.getConnection(err => {
   if (err) throw err;
   console.log('Connected!');
@@ -32,8 +28,13 @@ app.get('/pups', (req, res) => {
   pool.query('SELECT * FROM pups', (err, rows) => {
     if (err) throw err;
     res.send(rows);
+    console.log('heyoo');
   })
 });
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname + '/client/build/index.html'));
+})
 
 app.post('/pups', (req, res) => {
   const newPup = { 
