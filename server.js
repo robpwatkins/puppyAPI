@@ -1,12 +1,12 @@
 const express = require('express');
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 5000;
 const mysql = require('mysql');
 const connection = mysql.createConnection({
   host: 'us-cdbr-east-02.cleardb.com',
-  user: 'b716d56107f6c3',
-  password: '31ce2aeb',
-  database: 'testPup'
+  user: 'b4d90c8a948ffc',
+  password: '2dc553d4',
+  database: 'heroku_255650b15c9441'
 });
 
 app.listen(port, () => console.log(`Listening on port ${port}...`));
