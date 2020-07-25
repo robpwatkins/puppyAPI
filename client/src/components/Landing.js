@@ -5,9 +5,9 @@ import { RepeatOneSharp } from '@material-ui/icons';
 const Landing = () => {
   const [pups, setPups] = useState();
 
-  useEffect(() => {
-    getPups();
-  }, [])
+  // useEffect(() => {
+  //   getPups();
+  // }, [])
 
   const getPups = async () => {
     const response = await fetch('/pups');

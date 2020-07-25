@@ -21,14 +21,14 @@ const SubmitPup = () => {
   }
 
   const postToPups = async (name) => {
-    const response = await fetch('/pups', {
+    const response = await fetch('/tester_pups', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
         name: name,
-        imgUrl: imgUrl
+        // imgUrl: imgUrl
       })
     })
     const body = await response.json();
