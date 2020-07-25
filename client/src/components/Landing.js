@@ -5,10 +5,11 @@ const Landing = () => {
 
   useEffect(() => {
     getPups();
+    console.log('got pups.');
   }, [])
 
   const getPups = async () => {
-    const response = await fetch('/tester_pups');
+    const response = await fetch('/pups');
     const body = await response.json();
 
     if (response.status !== 200) {
@@ -29,11 +30,7 @@ const Landing = () => {
           {pups &&
             pups.map(pup => {
               return (
-                // <img src={pup.img_url} key={pup.idtester} alt="" />
-                <div key={pup.idtester}>
-                  <h2>{pup.name}</h2>
-                  <p>{pup.img_url}</p>
-                </div>
+                <img src={pup.img_url} key={pup.pups_id} alt="" />
               )
             })
           }

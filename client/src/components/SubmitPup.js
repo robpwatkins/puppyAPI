@@ -20,19 +20,18 @@ const SubmitPup = () => {
     setImgUrl(file.secure_url);
   }
 
-  const postToPups = async (name) => {
-    const response = await fetch('/tester_pups', {
+  const postToPups = async (name, imgUrl) => {
+    const response = await fetch('/pups', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
         name: name,
-        // imgUrl: imgUrl
+        img_url: imgUrl
       })
     })
     const body = await response.json();
-    console.log(body);
     return body;
   }
 
@@ -43,7 +42,7 @@ const SubmitPup = () => {
   const handleSubmit = event => {
     event.preventDefault();
     let { name } = input;
-    postToPups(name);
+    postToPups(name, imgUrl);
     window.location.replace('/');
   }
   console.log(input.name);

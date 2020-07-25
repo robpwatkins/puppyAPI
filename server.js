@@ -21,19 +21,19 @@ app.use(express.json());
 
 app.get('/ping', (req, res) => res.send('pong!'));
 
-app.get('/tester_pups', (req, res) => {
-  pool.query('SELECT * FROM tester_pups', (err, rows) => {
+app.get('/pups', (req, res) => {
+  pool.query('SELECT * FROM pups', (err, rows) => {
     if (err) throw err;
     res.send(rows);
   })
 });
 
-app.post('/tester_pups', (req, res) => {
+app.post('/pups', (req, res) => {
   const newPup = { 
     name: req.body.name,
-    img_url: req.body.imgUrl
+    img_url: req.body.img_url
    }
-  connection.query('INSERT INTO tester_pups SET ?', newPup, (err, res) => {
+  pool.query('INSERT INTO pups SET ?', newPup, (err, res) => {
     if (err) throw err;
   })
 })
