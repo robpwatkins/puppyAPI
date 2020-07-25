@@ -12,6 +12,10 @@ const pool = mysql.createPool({
 
 app.listen(port, () => console.log(`Listening on port ${port}...`));
 
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+}
+
 pool.getConnection(err => {
   if (err) throw err;
   console.log('Connected!');
