@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require('path');
 const app = express();
 const port = process.env.PORT || 5000;
 const mysql = require('mysql');
@@ -10,16 +11,13 @@ const pool = mysql.createPool({
   database: 'heroku_255650b15c9441b'
 });
 
+app.use(express.static(path.join(__dirname, 'client/build')));
+
 app.listen(port, () => console.log(`Listening on port ${port}...`));
 
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
-  
-  app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "build", "index.html"));
-  })
-}
-
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname + '/client/build/index.html'));
+})
 
 pool.getConnection(err => {
   if (err) throw err;
