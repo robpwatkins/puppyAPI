@@ -2,7 +2,8 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT || 5000;
 const mysql = require('mysql');
-const connection = mysql.createConnection({
+const pool = mysql.createPool({
+  connectionLimit: 10,
   host: 'us-cdbr-east-02.cleardb.com',
   user: 'b4d90c8a948ffc',
   password: '2dc553d4',
@@ -11,7 +12,7 @@ const connection = mysql.createConnection({
 
 app.listen(port, () => console.log(`Listening on port ${port}...`));
 
-connection.connect(err => {
+pool.getConnection(err => {
   if (err) throw err;
   console.log('Connected!');
 });
@@ -30,7 +31,7 @@ app.get('/pups', (req, res) => {
 app.post('/tester_pups', (req, res) => {
   const newPup = { 
     name: req.body.name,
-    // img_url: req.body.imgUrl
+    img_url: req.body.imgUrl
    }
   connection.query('INSERT INTO tester_pups SET ?', newPup, (err, res) => {
     if (err) throw err;
