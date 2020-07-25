@@ -3,10 +3,10 @@ const app = express();
 const port = process.env.PORT || 5000;
 const mysql = require('mysql');
 const connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'puppyAPIuser',
-  password: 'puppyAPI123$',
-  // database: 'puppy_api_db'
+  host: 'us-cdbr-east-02.cleardb.com',
+  user: 'b716d56107f6c3',
+  password: '31ce2aeb',
+  database: 'testPup'
 });
 
 app.listen(port, () => console.log(`Listening on port ${port}...`));
