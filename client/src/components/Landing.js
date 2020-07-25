@@ -1,24 +1,23 @@
 import React, { useState, useEffect } from 'react';
-import SubmitPup from './SubmitPup';
-import { RepeatOneSharp } from '@material-ui/icons';
 
 const Landing = () => {
   const [pups, setPups] = useState();
 
-  // useEffect(() => {
-  //   getPups();
-  // }, [])
+  useEffect(() => {
+    getPups();
+  }, [])
 
   const getPups = async () => {
-    const response = await fetch('/pups');
+    const response = await fetch('/tester_pups');
     const body = await response.json();
 
     if (response.status !== 200) {
       throw Error(body.message);
     }
+    console.log(body);
     setPups(body);
   }
-  pups && console.log(pups[0]);
+  // pups && console.log(pups[0]);
   return (
     <div className="landing-container">
       <div className="landing">
@@ -30,7 +29,11 @@ const Landing = () => {
           {pups &&
             pups.map(pup => {
               return (
-                <img src={pup.img_url} key={pup.pups_id} alt="" />
+                // <img src={pup.img_url} key={pup.idtester} alt="" />
+                <div key={pup.idtester}>
+                  <h2>{pup.name}</h2>
+                  <p>{pup.img_url}</p>
+                </div>
               )
             })
           }

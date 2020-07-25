@@ -21,8 +21,8 @@ app.use(express.json());
 
 app.get('/ping', (req, res) => res.send('pong!'));
 
-app.get('/pups', (req, res) => {
-  connection.query('SELECT * FROM pups', (err, rows) => {
+app.get('/tester_pups', (req, res) => {
+  pool.query('SELECT * FROM tester_pups', (err, rows) => {
     if (err) throw err;
     res.send(rows);
   })
