@@ -151,10 +151,13 @@ nav a:nth-child(1) {
   /* border-radius: 20px; */
 }
 
-img {
+.pup-card {
   width: 20%;
   height: auto;
-  /* border: 2px solid #42A5F5; */
+}
+
+img {
+  width: 100%;
 }
 
 @media (min-width: 992px) {

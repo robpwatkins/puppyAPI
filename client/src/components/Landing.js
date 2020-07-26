@@ -22,15 +22,17 @@ const Landing = () => {
   return (
     <div className="landing-container">
       <div className="landing">
-        <form action="">
+        {/* <form action="">
           <input type="text" placeholder="www.puppyapi.com/pups" />
           <button>FETCH!</button>
-        </form>
+        </form> */}
         <div className="pups">
           {pups &&
             pups.map(pup => {
               return (
-                <img src={pup.img_url} key={pup.pups_id} alt="" />
+                <div className="pup-card">
+                  <img src={pup.img_url} key={pup.pups_id} alt="" />
+                </div>
               )
             })
           }
