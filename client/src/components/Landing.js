@@ -32,6 +32,7 @@ const Landing = () => {
               return (
                 <div className="pup-card">
                   <img src={pup.img_url} key={pup.pups_id} alt="" />
+                  <div className="pup-overlay"></div>
                 </div>
               )
             })
