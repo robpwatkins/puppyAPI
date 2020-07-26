@@ -30,10 +30,7 @@ const Landing = () => {
           {pups &&
             pups.map(pup => {
               return (
-                <div className="pup-card">
-                  <img src={pup.img_url} key={pup.pups_id} alt="" />
-                  <div className="pup-overlay"></div>
-                </div>
+                <img src={pup.img_url} key={pup.pups_id} alt="" />
               )
             })
           }
