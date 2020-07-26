@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Fetcher from './Fetcher';
 
 const Landing = () => {
   const [pups, setPups] = useState();
@@ -22,6 +23,7 @@ const Landing = () => {
   return (
     <div className="landing-container">
       <div className="landing">
+        <Fetcher />
         {/* <form action="">
           <input type="text" placeholder="www.puppyapi.com/pups" />
           <button>FETCH!</button>

@@ -2,7 +2,7 @@ import React from 'react';
 
 const Fetcher = () => {
   return (
-    <div className="fetcher"></div>
+    <div className="fetcher">It's Fetcher.</div>
   )
 }
 
