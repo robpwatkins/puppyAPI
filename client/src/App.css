@@ -137,11 +137,21 @@ nav a:nth-child(1) {
 }
 
 .landing-container {
-  text-align: center;
-  /* background: #308EE4; */
   border: 12px solid #308EE4;
 }
 
+.landing {
+  display: flex;
+  justify-content: center;
+}
+
+.fetcher {
+  position: fixed;
+  bottom: 50px;
+  background: rgba(255, 255, 255, 0.808);
+  width: 35%;
+  height: 10%;
+}
 
 .pups {
   display: flex;
