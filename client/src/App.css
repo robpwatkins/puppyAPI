@@ -146,23 +146,27 @@ nav a:nth-child(1) {
 }
 
 .fetcher-container {
-  width: 35%;
   position: fixed;
   bottom: 75px;
+  width: 35%;
+  height: 10%;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.808);
+  border-radius: 10px;
 }
 
 .fetcher {
   display: flex;
+  width: 100%;
+  height: 100%;
   justify-content: center;
   align-items: center;
-  background: rgba(255, 255, 255, 0.808);
-  border-radius: 10px;
 }
 
 .fake-input {
   display: flex;
   width: 75%;
-  height: 55%;
+  height: 35%;
   justify-content: center;
   align-items: center;
   font-size: 18px;
@@ -188,7 +192,7 @@ button {
 
 .fetcher button {
   width: 20%;
-  height: 55%;
+  height: 35%;
   color: white;
   background: #308EE4;
   border-top-right-radius: 5px;
