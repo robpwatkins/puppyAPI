@@ -188,7 +188,8 @@ button {
   height: 55%;
   color: white;
   background: #308EE4;
-  
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 .pups {
