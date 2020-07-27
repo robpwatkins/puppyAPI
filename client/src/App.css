@@ -148,9 +148,30 @@ nav a:nth-child(1) {
 .fetcher {
   position: fixed;
   bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: rgba(255, 255, 255, 0.808);
   width: 35%;
-  height: 10%;
+  height: 7%;
+  border-radius: 10px;
+}
+
+.fake-input {
+  display: flex;
+  width: 75%;
+  height: 55%;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  border: 2px solid #308EE4;
+  border-radius: 2px;
+}
+
+.fetcher button {
+  height: 55%;
+  color: white;
+  background: #308EE4;
 }
 
 .pups {
