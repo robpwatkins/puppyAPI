@@ -168,10 +168,27 @@ nav a:nth-child(1) {
   border-radius: 2px;
 }
 
+button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  -webkit-appearance: none;
+}
+
 .fetcher button {
+  width: 20%;
   height: 55%;
   color: white;
   background: #308EE4;
+  
 }
 
 .pups {
