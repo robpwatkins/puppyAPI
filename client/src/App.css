@@ -145,15 +145,17 @@ nav a:nth-child(1) {
   justify-content: center;
 }
 
-.fetcher {
+.fetcher-container {
+  width: 35%;
   position: fixed;
-  bottom: 50px;
+  bottom: 75px;
+}
+
+.fetcher {
   display: flex;
   justify-content: center;
   align-items: center;
   background: rgba(255, 255, 255, 0.808);
-  width: 35%;
-  height: 7%;
   border-radius: 10px;
 }
 
@@ -165,7 +167,8 @@ nav a:nth-child(1) {
   align-items: center;
   font-size: 18px;
   border: 2px solid #308EE4;
-  border-radius: 2px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 
 button {
