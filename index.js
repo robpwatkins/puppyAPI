@@ -28,10 +28,11 @@ app.get('/pups', (req, res) => {
   pool.query('SELECT * FROM pups', (err, rows) => {
     if (err) throw err;
     res.set({
-      "Access-Control-Allow-Origin" : "*", 
-      "Access-Control-Allow-Credentials" : true
+      'Content-Type': 'application/json',
+      'Access-Control-Allow-Origin' : "*", 
+      'Access-Control-Allow-Credentials' : true
     })
-    res.send(rows);
+    res.json(rows);
     console.log('heyoo');
   })
 });
