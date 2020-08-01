@@ -28,6 +28,11 @@ const Landing = () => {
           <input type="text" placeholder="www.puppyapi.com/pups" />
           <button>FETCH!</button>
         </form> */}
+        <button onClick={async () => {
+          const response = await fetch('/pups');
+          const body = await response.json();
+          console.log(body);
+        }}>click ME!</button>
         <div className="pups">
           {pups &&
             pups.map(pup => {
