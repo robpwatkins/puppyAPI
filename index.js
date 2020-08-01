@@ -5,10 +5,10 @@ const port = process.env.PORT || 5000;
 const mysql = require('mysql');
 const pool = mysql.createPool({
   connectionLimit: 10,
-  host: 'us-cdbr-east-02.cleardb.com',
-  user: 'b4d90c8a948ffc',
-  password: '2dc553d4',
-  database: 'heroku_255650b15c9441b'
+  host: '104.154.50.119',
+  user: 'root',
+  password: 'puppyAPI123$',
+  database: 'puppy_api_db'
 });
 
 app.use(express.static(path.join(__dirname, 'client/build')));

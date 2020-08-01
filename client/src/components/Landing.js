@@ -36,13 +36,13 @@ const Landing = () => {
               )
             })
           }
-          {pups &&
+          {/* {pups &&
             pups.map(pup => {
               return (
                 <img src={pup.img_url} key={pup.pups_id} alt="" />
               )
             })
-          }
+          } */}
         </div>
       </div>
     </div>
