@@ -184,11 +184,9 @@ nav a:nth-child(1) {
   align-items: center;
   padding: 5px;
   font-size: 18px;
-  background: white;
-  border: 2px solid #444444;
-  border-right: none;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
+  background: #cccccc;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
 }
 
 /* button reset */
@@ -215,15 +213,15 @@ button {
   font-size: 18px;
   font-weight: bold;
   color: white;
-  background: #7c7c7c;
+  background: #1876D2;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
 
 .fetcher button:hover {
-  /* color: #1876D2; */
-  background: #1876D2;
-  border: none;
+  color: #1876D2;
+  background: white;
+  border: 2px solid #1876D2;
 }
 
 .pups {
