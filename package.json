@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "heroku-postbuild": "cd client && npm install && npm run build"},
+    "heroku-postbuild": "cd client && npm install && npm run build"
+  },
   "proxy": "http://localhost:5000/",
   "repository": {
     "type": "git",
@@ -19,6 +20,7 @@
   },
   "homepage": "https://github.com/robpwatkins/puppyAPI#readme",
   "dependencies": {
+    "@material-ui/core": "^4.11.0",
     "express": "^4.17.1",
     "mysql": "^2.18.1"
   },

@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import Fetcher from './Fetcher';
+import Login from './Login';
 
 const Landing = () => {
   const [pups, setPups] = useState();
+  const [loginActive, setLoginActive] = useState(false);
 
   useEffect(() => {
     getPups();
@@ -22,16 +24,10 @@ const Landing = () => {
   return (
     <div className="landing-container">
       <div className="landing">
-        <Fetcher />
-        {/* <form action="">
-          <input type="text" placeholder="www.puppyapi.com/pups" />
-          <button>FETCH!</button>
-        </form> */}
-        {/* <button onClick={async () => {
-          const response = await fetch('/pups');
-          const body = await response.json();
-          console.log(body);
-        }}>click ME!</button> */}
+        {!loginActive && 
+          <Fetcher />}
+        {loginActive &&
+          <Login />}
         <div className="pups">
           {pups &&
             pups.map(pup => {
