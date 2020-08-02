@@ -1,2 +1,7 @@
 runtime: nodejs10
 env: standard
+
+handlers:
+  - url: /.*
+  script: main.app
+  secure: always
