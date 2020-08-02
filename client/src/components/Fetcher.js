@@ -6,7 +6,7 @@ const Fetcher = () => {
       <h3>Give it a try!</h3>
       <div className="fetcher">
         <div className="fake-input">https://www.puppyapi.com/pups/1</div>
-        <button>Fetch!</button>
+        <button>fetch</button>
       </div>
     </div>
   )
