@@ -129,13 +129,14 @@ nav a:hover {
   width: 62%;
   justify-content: space-around;
   padding-right: 4%;
+  font-weight: bold;
   /* padding: 0 100px; */
 }
 
 nav a:nth-child(1) {
-  transform: scale(1.3);
+  transform: scale(1.3) skew(-10deg);
   color: white;
-  /* font-weight: bold; */
+  font-weight: bold;
 }
 
 .landing-container {
