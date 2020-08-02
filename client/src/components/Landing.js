@@ -16,10 +16,9 @@ const Landing = () => {
     if (response.status !== 200) {
       throw Error(body.message);
     }
-    console.log(body);
     setPups(body);
   }
-  // pups && console.log(pups[0]);
+  // console.log(pups);
   return (
     <div className="landing-container">
       <div className="landing">
