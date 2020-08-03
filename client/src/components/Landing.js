@@ -7,23 +7,23 @@ const Landing = props => {
   const [adderActive, setAdderActive] = useState(false);
 
   useEffect(() => {
-    getPups();
-  }, [])
-
-  useEffect(() => {
     props.setPupsActive(true);
     props.setLoginActive(false);
   }, [props.setPupsActive, props.setLoginActive]);
-
+  
   const getPups = async () => {
     const response = await fetch('/pups');
     const body = await response.json();
-
+    
     if (response.status !== 200) {
       throw Error(body.message);
     }
     setPups(body);
   }
+
+  useEffect(() => {
+    getPups();
+  }, [getPups])
   // console.log(props.loginActive);
   return (
     <div className="landing-container">

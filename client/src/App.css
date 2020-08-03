@@ -134,7 +134,7 @@ nav a:hover {
   /* padding: 0 100px; */
 }
 
-.active {
+nav .active {
   transform: scale(1.3);
 }
 
@@ -182,6 +182,10 @@ nav a:hover {
   align-items: center;
 }
 
+.landing .active {
+  height: 500px;
+}
+
 .fake-input {
   display: flex;
   width: 75%;
@@ -194,7 +198,6 @@ nav a:hover {
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
 }
-
 
 button {
   cursor: pointer;
