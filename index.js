@@ -36,6 +36,18 @@ app.get('/pups', (req, res) => {
   })
 });
 
+app.get('/pups/1', (req, res) => {
+  pool.query('SELECT * FROM pups ORDER BY RAND() LIMIT 1;', (err, rows) => {
+    if (err) throw err;
+    res.set({
+      'Content-Type': 'application/json',
+      'Access-Control-Allow-Origin' : "*", 
+      'Access-Control-Allow-Credentials' : true
+    })
+    res.json(rows);
+  })
+})
+
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname + '/client/build/index.html'));
 })
