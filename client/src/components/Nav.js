@@ -1,27 +1,37 @@
 import React from 'react';
 // import { Pets } from '@material-ui/icons';
-import { NavLink } from 'react-router-dom';
-
-const Nav = () => {
-  return (
+// import { NavLink } from 'react-router-dom';
+const Nav = props => {
+console.log(props);
+return (
   <nav>
     <div className="links">
-      <NavLink 
-        exact 
-        to="/" 
-        activeClassName="active"
+      <a 
+        // exact 
+        // to="/" 
+        // activeClassName="active"
+        onClick={() => {
+          props.setLoginActive(false);
+          props.setPupsActive(true);
+        }}
+        className={props.pupsActive && 'active'}
       >Pups
-      </NavLink>
-      <NavLink 
-        to="/login" 
-        activeClassName="active"
+      </a>
+      <a 
+        // to="/login" 
+        // activeClassName="active"
+        onClick={() => {
+          props.setPupsActive(false);
+          props.setLoginActive(true);
+        }}
+        className={props.loginActive && 'active'}
         >Login
-      </NavLink>
-      <NavLink 
-        to="/documentation" 
-        activeClassName="active"
+      </a>
+      <a 
+        // to="/documentation" 
+        // activeClassName="active"
         >Documentation
-      </NavLink>
+      </a>
     </div>
   </nav>)
 }

@@ -113,6 +113,7 @@ nav {
 }
 
 nav a {
+  cursor: pointer;
   color: white;
   text-decoration: none;
   font-size: 2.3vw;
@@ -244,7 +245,7 @@ img {
   /* border: 2px solid #42A5F5; */
 }
 
-.login-container {
+/* .login-container {
   display: flex;
   justify-content: center;
   width: 100%;
@@ -253,10 +254,15 @@ img {
   background: whitesmoke;
   border: 12px solid #308EE4;
   border-radius: 10px;
+} */
+
+.login-container {
+  position: fixed;
+  padding-top: 45px;
 }
 
 .login {
-  width: 35%;
+  width: 350px;
   height: 200px;
   padding: 25px;
   background: whitesmoke;

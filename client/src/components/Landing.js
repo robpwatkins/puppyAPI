@@ -2,14 +2,18 @@ import React, { useState, useEffect } from 'react';
 import Fetcher from './Fetcher';
 import Login from './Login';
 
-const Landing = () => {
+const Landing = props => {
   const [pups, setPups] = useState();
-  const [loginActive, setLoginActive] = useState(false);
+  const [adderActive, setAdderActive] = useState(false);
 
   useEffect(() => {
     getPups();
-    console.log('got pups.');
   }, [])
+
+  useEffect(() => {
+    props.setPupsActive(true);
+    props.setLoginActive(false);
+  }, [props.setPupsActive, props.setLoginActive]);
 
   const getPups = async () => {
     const response = await fetch('/pups');
@@ -20,13 +24,13 @@ const Landing = () => {
     }
     setPups(body);
   }
-  // console.log(pups);
+  // console.log(props.loginActive);
   return (
     <div className="landing-container">
       <div className="landing">
-        {!loginActive && 
+        {props.pupsActive && 
           <Fetcher />}
-        {loginActive &&
+        {props.loginActive &&
           <Login />}
         <div className="pups">
           {pups &&

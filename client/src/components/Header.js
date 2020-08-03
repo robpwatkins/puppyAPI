@@ -2,7 +2,7 @@ import React from 'react';
 import Badge from './Badge';
 import Nav from './Nav';
 
-const Header = () => {
+const Header = props => {
   return (
     <header>
       <Badge />
@@ -10,7 +10,14 @@ const Header = () => {
         <div className="tagline-container">
           <h1 className="tagline">Let's play fetch.</h1>
         </div>
-        <Nav />
+        <Nav 
+          pupsActive={props.pupsActive}
+          setPupsActive={props.setPupsActive}
+          loginActive={props.loginActive}
+          setLoginActive={props.setLoginActive}
+          adderActive={props.adderActive}
+          setAdderActive={props.setAdderActive}
+        />
       </div>
     </header>
   )
