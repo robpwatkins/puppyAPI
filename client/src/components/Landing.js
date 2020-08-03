@@ -31,7 +31,10 @@ const Landing = props => {
         {props.pupsActive && 
           <Fetcher />}
         {props.loginActive &&
-          <Login />}
+          <Login 
+            setLoginActive={props.setLoginActive} 
+            setPupsActive={props.setPupsActive}
+          />}
         <div className="pups">
           {pups &&
             pups.map(pup => {
