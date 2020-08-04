@@ -31,7 +31,7 @@ const Landing = props => {
   return (
     <div className="landing-container">
       <div className="landing">
-        {props.pupsActive && 
+        {props.pupsActive && !adderActive &&
           <Fetcher />}
         {props.loginActive &&
           <Login 

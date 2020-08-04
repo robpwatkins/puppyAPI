@@ -6,7 +6,7 @@ const Adder = props => {
       <div className="adder">
         <button 
           onClick={() => props.setAdderActive(true)}
-          >Add a pup!
+          >Add a pup.
         </button>
       </div>
     </div>
