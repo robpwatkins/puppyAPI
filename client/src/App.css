@@ -326,6 +326,10 @@ input, textarea {
   border-radius: 10px;
 }
 
+fieldset {
+  border: none;
+}
+
 input[type="file"] {
   height: 200px;
 }
