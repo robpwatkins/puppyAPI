@@ -38,7 +38,7 @@ const Landing = props => {
             setLoginActive={props.setLoginActive} 
             setPupsActive={props.setPupsActive}
           />}
-        {adderActive && <SubmitPup />}
+        {adderActive && <SubmitPup setAdderActive={setAdderActive} />}
         <div className="pups">
           {checkAuth() && <Adder setAdderActive={setAdderActive} />}
           {pups &&

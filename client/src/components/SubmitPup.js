@@ -1,8 +1,14 @@
 import React, { useState } from 'react';
+import useOnClickOutside from '../useOnClickOutside';
 
-const SubmitPup = () => {
+const SubmitPup = props => {
+  const ref = useRef();
   const [imgUrl, setImgUrl] = useState(null);
   const [input, setInput] = useState({ name: '' });
+
+  useOnClickOutside(ref, () => {
+    props.setAdderActive(false);
+  });
 
   const uploadFile = async event => {
     console.log('uploading file . . .');
