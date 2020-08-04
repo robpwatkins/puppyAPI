@@ -45,7 +45,7 @@ const SubmitPup = () => {
     postToPups(name, imgUrl);
     window.location.replace('/');
   }
-  console.log(input.name);
+  // console.log(input.name);
   return (
     <form className="submit-pup" onSubmit={handleSubmit}>
       <fieldset /* disabled={loading} aria-busy={loading} */>

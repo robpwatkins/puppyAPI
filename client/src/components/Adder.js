@@ -1,10 +1,13 @@
 import React from 'react';
 
-const Adder = () => {
+const Adder = props => {
   return (
     <div className="adder-container">
       <div className="adder">
-        <button>Add a pup!</button>
+        <button 
+          onClick={() => props.setAdderActive(true)}
+          >Add a pup!
+        </button>
       </div>
     </div>
   )

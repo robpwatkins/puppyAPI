@@ -2,11 +2,12 @@ import React, { useState, useEffect } from 'react';
 import Fetcher from './Fetcher';
 import Login from './Login';
 import Adder from './Adder';
+import SubmitPup from './SubmitPup';
 import { checkAuth } from '../checkAuth';
 
 const Landing = props => {
   const [pups, setPups] = useState();
-  // const [adderActive, setAdderActive] = useState(false);
+  const [adderActive, setAdderActive] = useState(false);
 
   useEffect(() => {
     props.setPupsActive(pupsActive => pupsActive = true);
@@ -37,8 +38,9 @@ const Landing = props => {
             setLoginActive={props.setLoginActive} 
             setPupsActive={props.setPupsActive}
           />}
+        {adderActive && <SubmitPup />}
         <div className="pups">
-          {checkAuth() && <Adder />}
+          {checkAuth() && <Adder setAdderActive={setAdderActive} />}
           {pups &&
             pups.map(pup => {
               return (

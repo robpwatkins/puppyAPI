@@ -314,6 +314,10 @@ img {
 	height: 45px;
 }
 
+.submit-pup {
+  position: absolute;
+}
+
 button {
   width: 75px;
   height: 35px;
