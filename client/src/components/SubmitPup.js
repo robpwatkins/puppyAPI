@@ -64,7 +64,6 @@ const SubmitPup = props => {
               name="file" 
               placeholder="Upload an image" 
               // required 
-              // value={this.state.image}
               onChange={uploadFile}
               />
               {imgUrl && <img width="200" src={imgUrl} alt="Upload Preview" />}
