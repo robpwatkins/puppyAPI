@@ -14,7 +14,7 @@ return (
           props.setLoginActive(false);
           props.setPupsActive(true);
         }}
-        className={props.pupsActive && 'active'}
+        className={props.pupsActive ? 'active' : ''}
       >Pups
       </a>
       <a 
@@ -24,7 +24,7 @@ return (
           props.setPupsActive(false);
           props.setLoginActive(true);
         }}
-        className={props.loginActive && 'active'}
+        className={props.loginActive ? 'active' : ''}
         >Login
       </a>
       <a 

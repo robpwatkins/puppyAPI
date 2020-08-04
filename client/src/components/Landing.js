@@ -4,12 +4,12 @@ import Login from './Login';
 
 const Landing = props => {
   const [pups, setPups] = useState();
-  const [adderActive, setAdderActive] = useState(false);
+  // const [adderActive, setAdderActive] = useState(false);
 
   useEffect(() => {
-    props.setPupsActive(true);
+    props.setPupsActive(pupsActive => pupsActive = true);
     props.setLoginActive(false);
-  }, [props.setPupsActive, props.setLoginActive]);
+  }, []);
   
   const getPups = async () => {
     const response = await fetch('/pups');
@@ -23,7 +23,7 @@ const Landing = props => {
 
   useEffect(() => {
     getPups();
-  }, [getPups])
+  }, [])
   // console.log(props.loginActive);
   return (
     <div className="landing-container">
