@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import useOnClickOutside from '../useOnClickOutside';
 
 const SubmitPup = props => {
@@ -53,7 +53,7 @@ const SubmitPup = props => {
   }
   // console.log(input.name);
   return (
-    <div className="submit-pup-container">
+    <div className="submit-pup-container" ref={ref}>
       <form className="submit-pup" onSubmit={handleSubmit}>
         <fieldset /* disabled={loading} aria-busy={loading} */>
           <label htmlFor="file">
