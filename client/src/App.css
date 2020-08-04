@@ -154,6 +154,17 @@ nav .active {
   justify-content: center;
 }
 
+.adder-container {
+  width: 20%;
+  height: auto;
+  padding: 5px;
+}
+
+.adder {
+  height: 100%;
+  border: 5px dashed #308EE4;
+}
+
 .fetcher-modal-background {
   position: fixed;
   top: 0;

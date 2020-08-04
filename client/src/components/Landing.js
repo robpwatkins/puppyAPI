@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Fetcher from './Fetcher';
 import Login from './Login';
+import { checkAuth } from '../checkAuth';
 
 const Landing = props => {
   const [pups, setPups] = useState();
@@ -36,6 +37,10 @@ const Landing = props => {
             setPupsActive={props.setPupsActive}
           />}
         <div className="pups">
+          {checkAuth() &&
+          <div className="adder-container">
+            <div className="adder"></div>  
+          </div>}
           {pups &&
             pups.map(pup => {
               return (
