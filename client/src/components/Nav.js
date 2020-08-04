@@ -1,37 +1,42 @@
 import React from 'react';
-// import { Pets } from '@material-ui/icons';
-// import { NavLink } from 'react-router-dom';
+import { checkAuth } from '../checkAuth';
+
 const Nav = props => {
+
+  const handlePupsClick = () => {
+    props.setPupsActive(true);
+    props.setLoginActive(false);
+  }
+
+  const handleLoginClick = () => {
+    props.setLoginActive(true);
+    props.setPupsActive(false);
+  }
+
 console.log(props);
 return (
   <nav>
     <div className="links">
       <a 
-        // exact 
-        // to="/" 
-        // activeClassName="active"
-        onClick={() => {
-          props.setLoginActive(false);
-          props.setPupsActive(true);
-        }}
+        onClick={handlePupsClick}
         className={props.pupsActive ? 'active' : ''}
-      >Pups
+        >Pups
       </a>
-      <a 
-        // to="/login" 
-        // activeClassName="active"
-        onClick={() => {
-          props.setPupsActive(false);
-          props.setLoginActive(true);
-        }}
-        className={props.loginActive ? 'active' : ''}
-        >Login
-      </a>
-      <a 
-        // to="/documentation" 
-        // activeClassName="active"
-        >Documentation
-      </a>
+      {!checkAuth() ? (
+        <a 
+          onClick={handleLoginClick}
+          className={props.loginActive ? 'active' : ''}
+          >Login
+        </a> 
+      ):(
+        <a
+          onClick={() => {
+            document.cookie = 'loggedIn='
+            window.location.replace('/')
+          }}
+        >Logout</a>
+        )}
+      <a>Documentation</a>
     </div>
   </nav>)
 }
