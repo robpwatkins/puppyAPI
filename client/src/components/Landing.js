@@ -31,16 +31,14 @@ const Landing = props => {
   return (
     <div className="landing-container">
       <div className="landing">
-        <div className="modal-background">
-          {props.pupsActive && !adderActive &&
-            <Fetcher />}
-          {props.loginActive &&
-            <Login 
-              setLoginActive={props.setLoginActive} 
-              setPupsActive={props.setPupsActive}
-            />}
-          {adderActive && <SubmitPup setAdderActive={setAdderActive} />}
-        </div>
+        {props.pupsActive && !adderActive &&
+          <Fetcher />}
+        {props.loginActive &&
+          <Login 
+            setLoginActive={props.setLoginActive} 
+            setPupsActive={props.setPupsActive}
+          />}
+        {adderActive && <SubmitPup setAdderActive={setAdderActive} />}
         <div className="pups">
           {checkAuth() && <Adder setAdderActive={setAdderActive} />}
           {pups &&
