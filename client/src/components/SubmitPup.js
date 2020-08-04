@@ -4,7 +4,12 @@ import useOnClickOutside from '../useOnClickOutside';
 const SubmitPup = props => {
   const ref = useRef();
   const [imgUrl, setImgUrl] = useState(null);
-  const [input, setInput] = useState({ name: '' });
+  const [input, setInput] = useState({ 
+    name: '',
+    dob: '',
+    hometown: '',
+    about: ''
+  });
 
   useOnClickOutside(ref, () => {
     props.setAdderActive(false);
@@ -68,6 +73,7 @@ const SubmitPup = props => {
               />
               {imgUrl && <img width="200" src={imgUrl} alt="Upload Preview" />}
           </label>
+          <br />
           <label htmlFor="name">
             Name
             <input 
@@ -80,6 +86,46 @@ const SubmitPup = props => {
               onChange={handleChange}
               />
           </label>
+          <br />
+          <label htmlFor="name">
+            Date of Birth
+            <input 
+              type="number" 
+              id="DOB" 
+              name="DOB" 
+              placeholder="Date of birth" 
+              required 
+              value={input.dob ? input.dob : ''}
+              onChange={handleChange}
+              />
+          </label>
+          <br />
+          <label htmlFor="name">
+            Hometown
+            <input 
+              type="text" 
+              id="hometown" 
+              name="hometown" 
+              placeholder="Hometown" 
+              required 
+              value={input.hometown ? input.hometown : ''}
+              onChange={handleChange}
+              />
+          </label>
+          <br />
+          <label htmlFor="name">
+            About
+            <textarea 
+              type="text" 
+              id="about" 
+              name="about" 
+              placeholder="Tell us about your pup . . ." 
+              required 
+              value={input.about ? input.about : ''}
+              onChange={handleChange}
+              />
+          </label>
+          <br />
           <button type="submit">SUBMIT</button>
         </fieldset>
       </form>
