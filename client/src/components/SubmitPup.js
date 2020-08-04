@@ -71,7 +71,9 @@ const SubmitPup = props => {
               // required 
               onChange={uploadFile}
               />
-              {imgUrl && <img width="200" src={imgUrl} alt="Upload Preview" />}
+              <div className="img-preview">
+                {imgUrl && <img width="200" src={imgUrl} alt="Upload Preview" />}
+              </div>
           </label>
           <br />
           <label htmlFor="name">
