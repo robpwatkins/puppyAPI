@@ -7,7 +7,7 @@ import { checkAuth } from '../checkAuth';
 
 const Landing = props => {
   const [pups, setPups] = useState();
-  const [adderActive, setAdderActive] = useState(true);
+  const [adderActive, setAdderActive] = useState(false);
 
   useEffect(() => {
     props.setPupsActive(pupsActive => pupsActive = true);
