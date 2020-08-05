@@ -166,6 +166,18 @@ nav .active {
   justify-content: center;
 }
 
+.fetcher-modal-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.753);
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+}
+
 .adder-container {
   width: 20%;
   height: auto;

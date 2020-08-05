@@ -37,12 +37,15 @@ const Landing = props => {
             fetcherActive={fetcherActive}
             setFetcherActive={setFetcherActive} 
           />}
-        {props.loginActive &&
-          <Login 
-            setLoginActive={props.setLoginActive} 
-            setPupsActive={props.setPupsActive}
-          />}
-        {adderActive && <SubmitPup setAdderActive={setAdderActive} />}
+        {(props.loginActive || adderActive) &&
+        <div className="modal-background">
+          {props.loginActive &&
+            <Login 
+              setLoginActive={props.setLoginActive} 
+              setPupsActive={props.setPupsActive}
+            />}
+          {adderActive && <SubmitPup setAdderActive={setAdderActive} />}
+        </div>}
         <div className="pups">
           {checkAuth() && <Adder setAdderActive={setAdderActive} />}
           {pups &&
