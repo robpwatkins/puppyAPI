@@ -164,6 +164,7 @@ nav .active {
   width: 100vw;
   height: 100vh;
   justify-content: center;
+  z-index: 1;
 }
 
 .fetcher-modal-background {
@@ -350,12 +351,13 @@ input, textarea {
   top: 225px;
   display: flex;
   width: 50%;
-  /* height: 50%; */
+  height: 50%;
   justify-content: center;
   padding: 20px;
   background: whitesmoke;
   border: 5px solid #42A5F5;
   border-radius: 10px;
+  overflow: scroll;
 }
 
 fieldset {
@@ -363,7 +365,7 @@ fieldset {
 }
 
 .img-preview {
-  height: 200px;
+  /* height: 200px; */
 }
 
 .img-preview img {
