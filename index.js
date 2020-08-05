@@ -3,12 +3,13 @@ const path = require('path');
 const app = express();
 const port = process.env.PORT || 5000;
 const mysql = require('mysql');
+require('dotenv/config');
 const pool = mysql.createPool({
   connectionLimit: 10,
-  host: 'us-cdbr-east-02.cleardb.com',
-  user: 'b4d90c8a948ffc',
-  password: '2dc553d4',
-  database: 'heroku_255650b15c9441b'
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB
 });
 
 console.log(process.env.SECRET_MESSAGE);
