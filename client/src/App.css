@@ -323,8 +323,11 @@ img {
 }
 
 .login {
+  display: flex;
+  flex-direction: column;
   width: 350px;
-  height: 200px;
+  height: 250px;
+  justify-content: space-evenly;
   padding: 25px;
   background: whitesmoke;
   border: 5px solid #42A5F5;
@@ -336,15 +339,26 @@ input, textarea {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	outline: none;
-	display: block;
-	width: 100%;
+	/* display: block; */
+  width: 100%;
+  margin-bottom: 3px;
 	padding: 7px;
 	border: none;
 	border-bottom: 1px solid #ddd;
 	background: transparent;
-	margin-bottom: 10px;
 	font: 16px Arial, Helvetica, sans-serif;
 	height: 45px;
+}
+
+input[name="breed"] {
+  margin-bottom: 0px;
+}
+
+.submit-pup-container textarea {
+  /* font-size: 13px; */
+  height: auto;
+  margin-bottom: 10px;
+  outline: 1px solid #aaaaaa;
 }
 
 .submit-pup-container {
@@ -352,7 +366,7 @@ input, textarea {
   /* top: 225px; */
   display: flex;
   width: 50%;
-  max-height: 650px;
+  max-height: 625px;
   height: 100vh;
   /* height: 500px; */
   justify-content: center;
@@ -368,11 +382,12 @@ fieldset {
 }
 
 .img-preview {
-  /* height: 200px; */
+  min-height: 155px;
+  border: 2px dashed #aaaaaa;
 }
 
 .img-preview img {
-  width: 55%;
+  width: 45%;
   height: auto;
 }
 

@@ -103,11 +103,32 @@ const SubmitPup = props => {
             onChange={handleChange}
           />
           <br />
+          <input 
+            type="text" 
+            id="gender" 
+            name="gender" 
+            placeholder="Gender" 
+            required 
+            value={input.gender ? input.gender : ''}
+            onChange={handleChange}
+          />
+          <br />
+          <input 
+            type="text" 
+            id="breed" 
+            name="breed" 
+            placeholder="Breed" 
+            required 
+            value={input.breed ? input.breed : ''}
+            onChange={handleChange}
+          />
+          <br />
           <textarea 
+            rows="3"
             type="text" 
             id="about" 
             name="about" 
-            placeholder="Tell us about your pup . . ." 
+            placeholder="One or two sentences about your pup." 
             required 
             value={input.about ? input.about : ''}
             onChange={handleChange}
