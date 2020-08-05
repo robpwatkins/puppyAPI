@@ -11,6 +11,8 @@ const pool = mysql.createPool({
   database: 'heroku_255650b15c9441b'
 });
 
+console.log(process.env.SECRET_MESSAGE);
+
 app.use(express.static(path.join(__dirname, 'client/build')));
 
 app.listen(port, () => console.log(`Listening on port ${port}...`));
