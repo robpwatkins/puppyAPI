@@ -1,14 +1,13 @@
 import React, { useState, useRef } from 'react';
 import useOnClickOutside from '../useOnClickOutside';
 
-const Fetcher = () => {
+const Fetcher = props => {
   const ref = useRef();
-  const [fetcherActive, setFetcherActive] = useState(false);
   const [pup, setPup] = useState([]);
-  useOnClickOutside(ref, () => setFetcherActive(false));
+  useOnClickOutside(ref, () => props.setFetcherActive(false));
 
   const handleClick = () => {
-    setFetcherActive(true);
+    props.setFetcherActive(true);
     getRandomPup();
   }
 
@@ -21,13 +20,13 @@ const Fetcher = () => {
   return (
     <div 
       className={
-        fetcherActive 
+        props.fetcherActive 
         ? "fetcher-container active" 
         : "fetcher-container"}
       ref={ref}>
-      {!fetcherActive && 
+      {!props.fetcherActive && 
       <h3>Give it a try!</h3>}
-      {fetcherActive && pup.length > 0 &&
+      {props.fetcherActive && pup.length > 0 &&
       <img src={pup[0].img_url} alt=""/>}
       <div className="fetcher">
         <div className="fake-input">https://www.puppyapi.com/pups/1</div>

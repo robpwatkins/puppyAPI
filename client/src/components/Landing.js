@@ -7,6 +7,7 @@ import { checkAuth } from '../checkAuth';
 
 const Landing = props => {
   const [pups, setPups] = useState();
+  const [fetcherActive, setFetcherActive] = useState(false);
   const [adderActive, setAdderActive] = useState(false);
 
   useEffect(() => {
@@ -32,7 +33,10 @@ const Landing = props => {
     <div className="landing-container">
       <div className="landing">
         {props.pupsActive && !adderActive &&
-          <Fetcher />}
+          <Fetcher 
+            fetcherActive={fetcherActive}
+            setFetcherActive={setFetcherActive} 
+          />}
         {props.loginActive &&
           <Login 
             setLoginActive={props.setLoginActive} 
