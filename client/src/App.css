@@ -362,7 +362,7 @@ input[name="name"] {
   /* font-size: 13px; */
   height: auto;
   margin-bottom: 10px;
-  outline: 1px solid #aaaaaa;
+  outline: 1px solid #c2c2c2;
 }
 
 .submit-pup-container {
