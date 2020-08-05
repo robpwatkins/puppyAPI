@@ -61,72 +61,57 @@ const SubmitPup = props => {
     <div className="submit-pup-container" ref={ref}>
       <form className="submit-pup" onSubmit={handleSubmit}>
         <fieldset /* disabled={loading} aria-busy={loading} */>
-          <label htmlFor="file">
-            Image
-            <input 
-              type="file" 
-              id="file" 
-              name="file" 
-              placeholder="Upload an image" 
-              // required 
-              onChange={uploadFile}
-              />
-              <div className="img-preview">
-                {imgUrl && <img width="200" src={imgUrl} alt="Upload Preview" />}
-              </div>
-          </label>
+          <input 
+            type="file" 
+            id="file" 
+            name="file" 
+            placeholder="Upload an image" 
+            required 
+            onChange={uploadFile}
+          />
+          <div className="img-preview">
+            {imgUrl && <img width="200" src={imgUrl} alt="Upload Preview" />}
+          </div>
           <br />
-          <label htmlFor="name">
-            Name
-            <input 
-              type="text" 
-              id="name" 
-              name="name" 
-              placeholder="Name" 
-              required 
-              value={input.name ? input.name : ''}
-              onChange={handleChange}
-              />
-          </label>
+          <input 
+            type="text" 
+            id="name" 
+            name="name" 
+            placeholder="Name" 
+            required 
+            value={input.name ? input.name : ''}
+            onChange={handleChange}
+          />
           <br />
-          <label htmlFor="name">
-            Date of Birth
-            <input 
-              type="number" 
-              id="DOB" 
-              name="DOB" 
-              placeholder="Date of birth" 
-              required 
-              value={input.dob ? input.dob : ''}
-              onChange={handleChange}
-              />
-          </label>
+          <input 
+            type="number" 
+            id="DOB" 
+            name="DOB" 
+            placeholder="Date of birth" 
+            required 
+            value={input.dob ? input.dob : ''}
+            onChange={handleChange}
+          />
           <br />
-          <label htmlFor="name">
-            Hometown
-            <input 
-              type="text" 
-              id="hometown" 
-              name="hometown" 
-              placeholder="Hometown" 
-              required 
-              value={input.hometown ? input.hometown : ''}
-              onChange={handleChange}
-              />
-          </label>
+          <input 
+            type="text" 
+            id="hometown" 
+            name="hometown" 
+            placeholder="Hometown" 
+            required 
+            value={input.hometown ? input.hometown : ''}
+            onChange={handleChange}
+          />
           <br />
-          <label htmlFor="name">
-            About
-            <textarea 
-              type="text" 
-              id="about" 
-              name="about" 
-              placeholder="Tell us about your pup . . ." 
-              required 
-              value={input.about ? input.about : ''}
-              onChange={handleChange}
-              />
-          </label>
+          <textarea 
+            type="text" 
+            id="about" 
+            name="about" 
+            placeholder="Tell us about your pup . . ." 
+            required 
+            value={input.about ? input.about : ''}
+            onChange={handleChange}
+          />
           <br />
           <button type="submit">SUBMIT</button>
         </fieldset>

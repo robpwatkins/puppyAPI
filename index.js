@@ -12,8 +12,6 @@ const pool = mysql.createPool({
   database: process.env.DB
 });
 
-console.log(process.env.SECRET_MESSAGE);
-
 app.use(express.static(path.join(__dirname, 'client/build')));
 
 app.listen(port, () => console.log(`Listening on port ${port}...`));
