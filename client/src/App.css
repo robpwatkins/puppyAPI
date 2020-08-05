@@ -354,6 +354,10 @@ input[name="breed"] {
   margin-bottom: 0px;
 }
 
+input[name="name"] {
+  margin-top: -15px;
+}
+
 .submit-pup-container textarea {
   /* font-size: 13px; */
   height: auto;
@@ -384,7 +388,7 @@ fieldset {
 .img-preview {
   width: 45%;
   min-height: 162px;
-  margin: 0 auto;
+  margin: 10px auto 0 auto;
   border: 2px dashed #aaaaaa;
 }
 
