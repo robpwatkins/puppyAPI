@@ -27,7 +27,16 @@ const Fetcher = props => {
       {!props.fetcherActive && 
       <h3>Give it a try!</h3>}
       {props.fetcherActive && pup.length > 0 &&
-      <img src={pup[0].img_url} alt=""/>}
+      <div className="fetched-pup">
+        <img src={pup[0].img_url} alt=""/>
+        <h3>Name: {pup[0].name}</h3>
+        <h4>Breed: </h4>
+        <h4>Birthday: </h4>
+        <h4>Hometown: </h4>
+        <h4>Gender: </h4>
+        <h4>About: </h4>
+      </div>
+      }
       <div className="fetcher">
         <div className="fake-input">https://www.puppyapi.com/pups/1</div>
         <button onClick={handleClick}>fetch</button>
