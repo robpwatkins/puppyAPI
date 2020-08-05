@@ -11,6 +11,7 @@ const Nav = props => {
   const handleLoginClick = () => {
     props.setLoginActive(true);
     props.setPupsActive(false);
+    document.body.style.overflow = 'hidden';
   }
 
 console.log(props);
