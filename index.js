@@ -26,7 +26,7 @@ app.use(express.json());
 app.get('/ping', (req, res) => res.send('pong!'));
 
 app.get('/pups', (req, res) => {
-  pool.query('SELECT * FROM pups', (err, rows) => {
+  pool.query('SELECT * FROM pups ORDER BY RAND()', (err, rows) => {
     if (err) throw err;
     res.set({
       'Content-Type': 'application/json',
