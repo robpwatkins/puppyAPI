@@ -61,17 +61,19 @@ const SubmitPup = props => {
     <div className="submit-pup-container" ref={ref}>
       <form className="submit-pup" onSubmit={handleSubmit}>
         <fieldset /* disabled={loading} aria-busy={loading} */>
-          <input 
+          {!imgUrl &&
+            <input 
             type="file" 
             id="file" 
             name="file" 
             placeholder="Upload an image" 
             required 
             onChange={uploadFile}
-          />
-          <div className="img-preview">
+          />}
+          {imgUrl &&
+            <div className="img-preview">
             {imgUrl && <img width="200" src={imgUrl} alt="Upload Preview" />}
-          </div>
+          </div>}
           <br />
           <input 
             type="text" 

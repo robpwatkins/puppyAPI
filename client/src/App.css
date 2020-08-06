@@ -354,6 +354,13 @@ input[name="breed"] {
   margin-bottom: 0px;
 }
 
+input[name="file"] {
+  width: 100%;
+  min-height: 154px;
+  margin: 10px auto 15px auto;
+  border: 2px dashed #aaaaaa;
+}
+
 input[name="name"] {
   margin-top: -15px;
 }
@@ -370,7 +377,7 @@ input[name="name"] {
   /* top: 225px; */
   display: flex;
   width: 50%;
-  max-height: 625px;
+  max-height: 585px;
   height: 100vh;
   /* height: 500px; */
   justify-content: center;
@@ -387,7 +394,7 @@ fieldset {
 
 .img-preview {
   width: 45%;
-  min-height: 162px;
+  min-height: 154px;
   margin: 10px auto 0 auto;
   border: 2px dashed #aaaaaa;
 }
