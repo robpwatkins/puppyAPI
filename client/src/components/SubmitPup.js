@@ -5,9 +5,12 @@ const SubmitPup = props => {
   const ref = useRef();
   const [imgUrl, setImgUrl] = useState(null);
   const [input, setInput] = useState({ 
+    imgUrl: '',
     name: '',
     dob: '',
     hometown: '',
+    gender: '',
+    breed: '',
     about: ''
   });
 
@@ -31,15 +34,17 @@ const SubmitPup = props => {
     setImgUrl(file.secure_url);
   }
 
-  const postToPups = async (name, imgUrl) => {
+  const postToPups = async input => {
+    console.log(input.name);
     const response = await fetch('/pups', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        name: name,
-        img_url: imgUrl
+        img_url: input.imgUrl,
+        name: input.name,
+        // img_url: imgUrl
       })
     })
     const body = await response.json();
@@ -47,14 +52,15 @@ const SubmitPup = props => {
   }
 
   const handleChange = event => {
-    setInput({ ...input, name: event.target.value });
+    setInput({ ...input, [event.target.name]: event.target.value });
   }
 
   const handleSubmit = event => {
     event.preventDefault();
-    let { name } = input;
-    postToPups(name, imgUrl);
-    window.location.replace('/');
+    // let { name } = input;
+    // console.log(name);
+    postToPups(input);
+    // window.location.replace('/');
   }
   // console.log(input.name);
   return (
@@ -67,7 +73,7 @@ const SubmitPup = props => {
             id="file" 
             name="file" 
             placeholder="Upload an image" 
-            required 
+            // required 
             onChange={uploadFile}
           />}
           {imgUrl &&
@@ -86,11 +92,11 @@ const SubmitPup = props => {
           />
           <br />
           <input 
-            type="number" 
+            type="text" 
             id="DOB" 
-            name="DOB" 
+            name="dob" 
             placeholder="Date of birth" 
-            required 
+            // required 
             value={input.dob ? input.dob : ''}
             onChange={handleChange}
           />
@@ -100,7 +106,7 @@ const SubmitPup = props => {
             id="hometown" 
             name="hometown" 
             placeholder="Hometown" 
-            required 
+            // required 
             value={input.hometown ? input.hometown : ''}
             onChange={handleChange}
           />
@@ -110,7 +116,7 @@ const SubmitPup = props => {
             id="gender" 
             name="gender" 
             placeholder="Gender" 
-            required 
+            // required 
             value={input.gender ? input.gender : ''}
             onChange={handleChange}
           />
@@ -120,7 +126,7 @@ const SubmitPup = props => {
             id="breed" 
             name="breed" 
             placeholder="Breed" 
-            required 
+            // required 
             value={input.breed ? input.breed : ''}
             onChange={handleChange}
           />
@@ -131,7 +137,7 @@ const SubmitPup = props => {
             id="about" 
             name="about" 
             placeholder="One or two sentences about your pup." 
-            required 
+            // required 
             value={input.about ? input.about : ''}
             onChange={handleChange}
           />

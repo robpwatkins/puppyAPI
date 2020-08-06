@@ -54,11 +54,12 @@ app.get("*", (req, res) => {
 })
 
 app.post('/pups', (req, res) => {
-  const newPup = { 
-    name: req.body.name,
-    img_url: req.body.img_url
-   }
-  pool.query('INSERT INTO pups SET ?', newPup, (err, res) => {
-    if (err) throw err;
-  })
+  // const newPup = { 
+    // name: req.body.name,
+    // img_url: req.body.img_url
+  //  }
+   console.log(req.body);
+  // pool.query('INSERT INTO pups SET ?', newPup, (err, res) => {
+  //   if (err) throw err;
+  // })
 })
