@@ -7,6 +7,7 @@ const Login = props => {
   useOnClickOutside(ref, () => {
     props.setLoginActive(false);
     props.setPupsActive(true);
+    document.body.style.overflow = 'scroll';
   });
 
   const handleSubmit = event => {

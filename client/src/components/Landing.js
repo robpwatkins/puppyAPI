@@ -22,7 +22,7 @@ const Landing = props => {
     if (response.status !== 200) {
       throw Error(body.message);
     }
-    setPups(body);
+    setPups(body.reverse());
   }
 
   useEffect(() => {
