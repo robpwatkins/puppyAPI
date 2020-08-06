@@ -54,12 +54,16 @@ app.get("*", (req, res) => {
 })
 
 app.post('/pups', (req, res) => {
-  // const newPup = { 
-    // name: req.body.name,
-    // img_url: req.body.img_url
-  //  }
-   console.log(req.body);
-  // pool.query('INSERT INTO pups SET ?', newPup, (err, res) => {
-  //   if (err) throw err;
-  // })
+  const newPup = { 
+    img_url: req.body.img_url,
+    name: req.body.name,
+    dob: req.body.dob,
+    hometown: req.body.hometown,
+    gender: req.body.gender,
+    breed: req.body.breed,
+    about: req.body.about
+   }
+  pool.query('INSERT INTO pups SET ?', newPup, (err, res) => {
+    if (err) throw err;
+  })
 })

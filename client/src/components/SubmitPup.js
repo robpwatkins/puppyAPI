@@ -5,7 +5,6 @@ const SubmitPup = props => {
   const ref = useRef();
   const [imgUrl, setImgUrl] = useState(null);
   const [input, setInput] = useState({ 
-    imgUrl: '',
     name: '',
     dob: '',
     hometown: '',
@@ -42,9 +41,13 @@ const SubmitPup = props => {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        img_url: input.imgUrl,
         name: input.name,
-        // img_url: imgUrl
+        dob: input.dob,
+        hometown: input.hometown,
+        gender: input.gender,
+        breed: input.breed,
+        about: input.about,
+        img_url: imgUrl
       })
     })
     const body = await response.json();
@@ -57,10 +60,8 @@ const SubmitPup = props => {
 
   const handleSubmit = event => {
     event.preventDefault();
-    // let { name } = input;
-    // console.log(name);
     postToPups(input);
-    // window.location.replace('/');
+    window.location.replace('/');
   }
   // console.log(input.name);
   return (

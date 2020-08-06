@@ -30,11 +30,11 @@ const Fetcher = props => {
       <div className="fetched-pup">
         <img src={pup[0].img_url} alt=""/>
         <h3>Name: {pup[0].name}</h3>
-        <h4>Breed: </h4>
-        <h4>Birthday: </h4>
-        <h4>Hometown: </h4>
-        <h4>Gender: </h4>
-        <h4>About: </h4>
+        <h4>Birthday: {pup[0].dob}</h4>
+        <h4>Hometown: {pup[0].hometown}</h4>
+        <h4>Breed: {pup[0].breed}</h4>
+        <h4>Gender: {pup[0].gender}</h4>
+        <h4>About: {pup[0].about}</h4>
       </div>
       }
       <div className="fetcher">
