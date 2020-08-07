@@ -16,6 +16,7 @@ const SubmitPup = props => {
 
   useOnClickOutside(ref, () => {
     props.setAdderActive(false);
+    document.body.style.overflow = "scroll";
   });
 
   const uploadFile = async event => {
