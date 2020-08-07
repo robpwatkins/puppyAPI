@@ -77,7 +77,7 @@ const SubmitPup = props => {
             id="file" 
             name="file" 
             placeholder="Upload an image" 
-            // required 
+            required 
             onChange={uploadFile}
           />}
           {imgUrl &&
@@ -93,47 +93,52 @@ const SubmitPup = props => {
             required 
             value={input.name ? input.name : ''}
             onChange={handleChange}
-          />
+            autoComplete="off"
+            />
           <br />
           <input 
             type="text" 
             id="DOB" 
             name="dob" 
             placeholder="Date of birth" 
-            // required 
+            required 
             value={input.dob ? input.dob : ''}
             onChange={handleChange}
-          />
+            autoComplete="off"
+            />
           <br />
           <input 
             type="text" 
             id="hometown" 
             name="hometown" 
             placeholder="Hometown" 
-            // required 
+            required 
             value={input.hometown ? input.hometown : ''}
             onChange={handleChange}
-          />
+            autoComplete="off"
+            />
           <br />
           <input 
             type="text" 
             id="gender" 
             name="gender" 
             placeholder="Gender" 
-            // required 
+            required 
             value={input.gender ? input.gender : ''}
             onChange={handleChange}
-          />
+            autoComplete="off"
+            />
           <br />
           <input 
             type="text" 
             id="breed" 
             name="breed" 
             placeholder="Breed" 
-            // required 
+            required 
             value={input.breed ? input.breed : ''}
             onChange={handleChange}
-          />
+            autoComplete="off"
+            />
           <br />
           <textarea 
             rows="3"
@@ -141,10 +146,11 @@ const SubmitPup = props => {
             id="about" 
             name="about" 
             placeholder="One or two sentences about your pup." 
-            // required 
+            required 
             value={input.about ? input.about : ''}
             onChange={handleChange}
-          />
+            autoComplete="off"
+            />
           <br />
           <button type="submit">SUBMIT</button>
         </fieldset>

@@ -23,6 +23,7 @@ const Login = props => {
         <Close className="login-closer" fontSize="small" />
         <input 
           required
+          autoComplete="off"
           type="email" 
           name="email"
           placeholder="email" 
