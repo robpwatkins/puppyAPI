@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import useOnClickOutside from '../useOnClickOutside';
+import { Close } from '@material-ui/icons';
 
 const Fetcher = props => {
   const ref = useRef();
@@ -28,6 +29,7 @@ const Fetcher = props => {
       <h3>Give it a try!</h3>}
       {props.fetcherActive && pup.length > 0 &&
       <div className="fetched-pup">
+        <Close className="fetcher-closer" fontSize="small" />
         <img src={pup[0].img_url} alt=""/>
         <div className="pup-info">
           <h3>Name: {pup[0].name}</h3>

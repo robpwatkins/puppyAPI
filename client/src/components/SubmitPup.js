@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import useOnClickOutside from '../useOnClickOutside';
+import { Close } from '@material-ui/icons';
 
 const SubmitPup = props => {
   const ref = useRef();
@@ -66,6 +67,7 @@ const SubmitPup = props => {
   // console.log(input.name);
   return (
     <div className="submit-pup-container" ref={ref}>
+      <Close className="submit-pup-closer" fontSize="small" />
       <form className="submit-pup" onSubmit={handleSubmit}>
         <fieldset /* disabled={loading} aria-busy={loading} */>
           {!imgUrl &&

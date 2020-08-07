@@ -248,6 +248,14 @@ nav .active {
   padding-left: 15px;
 }
 
+.fetcher-closer {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  color: #666666;
+  cursor: pointer;
+}
+
 .fetcher-container h4 {
   margin: 9px 9px 9px 0;
   font-size: 18px;
@@ -363,8 +371,8 @@ img {
 
 .login-closer {
   position: absolute;
-  top: 65px;
-  right: 20px;
+  top: 58px;
+  right: 12px;
   cursor: pointer;
   color: #666666;
   /* left: 100px; */
@@ -426,6 +434,13 @@ input[name="name"] {
 
 .submit-pup {
   width: 80%;
+}
+
+.submit-pup-closer {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  color: #666666;
 }
 
 fieldset {
