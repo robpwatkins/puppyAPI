@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import useOnClickOutside from '../useOnClickOutside';
+import { Close } from '@material-ui/icons';
 
 const Login = props => {
   const ref = useRef();
@@ -19,6 +20,7 @@ const Login = props => {
   return (
     <div ref={ref} className="login-container">
       <form className="login" onSubmit={handleSubmit}>
+        <Close className="login-closer" fontSize="small" />
         <input 
           required
           type="email" 
@@ -32,6 +34,7 @@ const Login = props => {
           placeholder="password" 
         />
         <button type="submit" value="Login">Login</button>
+        <h5>Don't have an account yet? <a href="">Join the fun!</a></h5>
       </form>
     </div>
   )

@@ -351,10 +351,23 @@ img {
   width: 350px;
   height: 250px;
   justify-content: space-evenly;
-  padding: 25px;
+  padding: 25px 25px 0 25px;
   background: whitesmoke;
   border: 5px solid #42A5F5;
   border-radius: 10px;
+}
+
+.login a {
+  color: #308EE4;
+}
+
+.login-closer {
+  position: absolute;
+  top: 65px;
+  right: 20px;
+  cursor: pointer;
+  color: #666666;
+  /* left: 100px; */
 }
 
 input, textarea {
