@@ -21,6 +21,11 @@ const Fetcher = props => {
     setIsHovered(false);
   }
 
+  const handleCloserClick = () => {
+    props.setFetcherActive(false);
+    setIsHovered(false);
+  }
+
   const getRandomPup = async () => {
     const response = await fetch('pups/1');
     const body = await response.json();
@@ -28,7 +33,7 @@ const Fetcher = props => {
   }
 
   let fetcherClass = [
-    'fetcher-container',
+    'fetcher-outline',
     props.fetcherActive && 'active',
     isHovered && 'hovered'
   ];
@@ -36,31 +41,33 @@ const Fetcher = props => {
 
   console.log(pup);
   return (
-    <div 
-      className={fetcherClass}
-      ref={ref}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}>
-      {!props.fetcherActive && 
-      <h3>Give it a try!</h3>}
-      {props.fetcherActive && pup.length > 0 &&
-      <div className="fetched-pup">
-        <Close className="fetcher-closer" fontSize="small" />
-        <img src={pup[0].img_url} alt=""/>
-        <div className="pup-info">
-          <h3>Name: {pup[0].name}</h3>
-          <h4>Birthday: {pup[0].dob}</h4>
-          <h4>Hometown: {pup[0].hometown}</h4>
-          <h4>Breed: {pup[0].breed}</h4>
-          <h4>Gender: {pup[0].gender}</h4>
-          <h4>About: {pup[0].about}</h4>
+    <div className={fetcherClass}>
+      <div 
+        className="fetcher-container"
+        ref={ref}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}>
+        {!props.fetcherActive && 
+        <h3>Give it a try!</h3>}
+        {props.fetcherActive && pup.length > 0 &&
+        <div className="fetched-pup">
+          <Close className="fetcher-closer" fontSize="small" onClick={handleCloserClick} />
+          <img src={pup[0].img_url} alt=""/>
+          <div className="pup-info">
+            <h3>Name: {pup[0].name}</h3>
+            <h4>Birthday: {pup[0].dob}</h4>
+            <h4>Hometown: {pup[0].hometown}</h4>
+            <h4>Breed: {pup[0].breed}</h4>
+            <h4>Gender: {pup[0].gender}</h4>
+            <h4>About: {pup[0].about}</h4>
+          </div>
+          <hr/>
         </div>
-        <hr/>
-      </div>
-      }
-      <div className="fetcher">
-        <div className="fake-input">https://www.puppyapi.com/pups/1</div>
-        <button onClick={handleClick}>fetch</button>
+        }
+        <div className="fetcher">
+          <div className="fake-input">https://www.puppyapi.com/pups/1</div>
+          <button onClick={handleClick}>fetch</button>
+        </div>
       </div>
     </div>
   )

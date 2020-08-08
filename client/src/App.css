@@ -213,15 +213,23 @@ nav .active {
   border-width: 5px;
 }
 
-.fetcher-container {
+.fetcher-outline {
   position: fixed;
   bottom: 75px;
+  width: 400px;
+  min-height: 100px;
+  height: 12%;
+  border: 1px solid var(--dark-blue);
+  border-radius: 12px;
+  transition: all .05s;
+}
+
+.fetcher-container {
   display: flex;
   flex-direction: column;
+  height: 100%;
   justify-content: space-around;
   align-items: center;
-  width: 400px;
-  height: 12%;
   text-align: center;
   /* padding-top: 15px; */
   font-family: 'Roboto', sans-serif;
@@ -487,7 +495,7 @@ button {
 }
 
 .hovered {
-  box-shadow: 5px 5px 10px #464646;
+  box-shadow: 5px 5px 10px #363636;
 }
 
 @media (min-width: 992px) {
