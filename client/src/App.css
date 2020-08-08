@@ -588,4 +588,13 @@ button {
     border-radius: 50%;
     box-shadow: 5px 5px 10px #363636;
   }
+
+  .fab-nav .clicked {
+    transform: rotate(45deg);
+  }
+
+  .submit-pup-container {
+    width: 100vw;
+    height: 100vh;
+  }
 }

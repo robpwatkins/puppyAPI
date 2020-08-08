@@ -33,7 +33,7 @@ const Landing = props => {
   return (
     <div className="landing-container">
       <div className="landing">
-        <FabNav />
+        <FabNav setLoginActive={props.setLoginActive} />
         {props.pupsActive && !adderActive &&
           <Fetcher 
             fetcherActive={fetcherActive}
