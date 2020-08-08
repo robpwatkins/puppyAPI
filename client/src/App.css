@@ -163,7 +163,7 @@ nav .active {
 }
 
 .modal-background {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.753);
@@ -367,8 +367,8 @@ img {
 } */
 
 .login-container {
-  position: fixed;
-  padding-top: 45px;
+  /* position: fixed; */
+  /* padding-top: 45px; */
 }
 
 .login {
