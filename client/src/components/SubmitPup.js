@@ -19,6 +19,11 @@ const SubmitPup = props => {
     document.body.style.overflow = "scroll";
   });
 
+  const handleCloserClick = () => {
+    props.setAdderActive(false);
+    document.body.style.overflow = "scroll";
+  }
+
   const uploadFile = async event => {
     console.log('uploading file . . .');
     const files = event.target.files;
@@ -68,7 +73,7 @@ const SubmitPup = props => {
   // console.log(input.name);
   return (
     <div className="submit-pup-container" ref={ref}>
-      <Close className="submit-pup-closer" fontSize="small" />
+      <Close className="submit-pup-closer" fontSize="small" onClick={handleCloserClick} />
       <form className="submit-pup" onSubmit={handleSubmit}>
         <fieldset /* disabled={loading} aria-busy={loading} */>
           {!imgUrl &&

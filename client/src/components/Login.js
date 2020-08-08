@@ -6,9 +6,7 @@ const Login = props => {
   const ref = useRef();
 
   useOnClickOutside(ref, () => {
-    props.setLoginActive(false);
-    props.setPupsActive(true);
-    document.body.style.overflow = 'scroll';
+    handleLoginClose();
   });
 
   const handleSubmit = event => {
@@ -17,10 +15,20 @@ const Login = props => {
     window.location.replace('/');
   }
 
+  const handleLoginClose = () => {
+    props.setLoginActive(false);
+    props.setPupsActive(true);
+    document.body.style.overflow = 'scroll';
+  }
+
+  const handleCloserClick = () => {
+    handleLoginClose();
+  }
+
   return (
     <div ref={ref} className="login-container">
       <form className="login" onSubmit={handleSubmit}>
-        <Close className="login-closer" fontSize="small" />
+        <Close className="login-closer" fontSize="small" onClick={handleCloserClick} />
         <input 
           required
           autoComplete="off"

@@ -3,6 +3,7 @@ import Fetcher from './Fetcher';
 import Login from './Login';
 import Adder from './Adder';
 import SubmitPup from './SubmitPup';
+import FabNav from './FabNav';
 import { checkAuth } from '../checkAuth';
 
 const Landing = props => {
@@ -32,6 +33,7 @@ const Landing = props => {
   return (
     <div className="landing-container">
       <div className="landing">
+        <FabNav />
         {props.pupsActive && !adderActive &&
           <Fetcher 
             fetcherActive={fetcherActive}
