@@ -349,6 +349,7 @@ button:active {
 
 .pups {
   display: flex;
+  /* flex-wrap: wrap; */
   flex-wrap: wrap;
   width: 100%;
   background: whitesmoke;
@@ -358,6 +359,7 @@ button:active {
 .pups > img {
   width: 20%;
   height: auto;
+  /* object-fit: contain; */
   /* border: 2px solid #42A5F5; */
 }
 
@@ -508,25 +510,26 @@ button {
 }
 
 @media (max-width: 600px) {
+.tagline-container {
+  font-size: 5vw;
+  }
+  
   .pups > img {
-    width: 25%
+    width: 25%;
+    flex-basis: 25%;
+    flex: 0 0 25%;
   }
 
   .adder-container {
     width: 25%;
+    flex-basis: 25%;
+    /* object-fit: contain; */
+    flex: 0 0 25%;
   }
 
   .fetcher-outline {
     display: none;
   }
-/* 
-  .badge-container {
-    display: none;
-  }
-
-  .tag-and-nav {
-    display: none;
-  } */
 
   nav {
     display: none;
@@ -596,5 +599,23 @@ button {
   .submit-pup-container {
     width: 100vw;
     height: 100vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .pups > img {
+    width: 50%;
+    flex-basis: 50%;
+    flex: 0 0 50%;
+  }
+
+  .adder-container {
+    width: 50%;
+    flex-basis: 50%;
+    flex: 0 0 50%;
+  }
+
+  .adder button {
+    font-size: 7vw;
   }
 }
