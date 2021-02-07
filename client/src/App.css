@@ -37,9 +37,10 @@ header {
   position: relative;
   display: flex;
   width: 100%;
-  height: 20vw;
+  /* height: 20vw; */
   align-items: center;
   background: #42A5F5;
+  background: #308EE4;
   /* border-bottom: 12px solid #1875d27a; */
 }
 
@@ -155,8 +156,8 @@ nav .active {
 } */
 
 .landing-container {
-  border: 1vw solid #308EE4;
-  border-radius: 10px;
+  /* border: 1vw solid #308EE4; */
+  /* border-radius: 10px; */
 }
 
 .landing {
