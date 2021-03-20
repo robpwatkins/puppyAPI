@@ -48,7 +48,7 @@ const Fetcher = props => {
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}>
         {!props.fetcherActive && 
-        <h3>Give it a try!</h3>}
+        <h3>PuppyAPI</h3>}
         {props.fetcherActive && pup.length > 0 &&
         <div className="fetched-pup">
           <Close className="fetcher-closer" fontSize="small" onClick={handleCloserClick} />
@@ -65,8 +65,8 @@ const Fetcher = props => {
         </div>
         }
         <div className="fetcher">
-          <div className="fake-input">https://www.puppyapi.com/pups/1</div>
-          <button onClick={handleClick}>fetch</button>
+          {/* <div className="fake-input">https://www.puppyapi.com/pups/1</div> */}
+          {/* <button onClick={handleClick}>fetch</button> */}
         </div>
       </div>
     </div>

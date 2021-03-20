@@ -220,7 +220,8 @@ nav .active {
 
 .fetcher-outline {
   position: fixed;
-  bottom: 75px;
+  top: 15px;
+  left: 15px;
   width: 400px;
   min-height: 100px;
   max-height: 500px;
